@@ -1,0 +1,49 @@
+(pseudocode) Set a variable and assignment
+
+
+
+function Display_Board
+    Print board
+
+FUNCTION InitializeGame() :
+    SET board = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+
+FUNCTION Display_Board
+    Print board[0]
+    Print "---+---+---"
+    Print board [3]
+    Print "---+---+---"
+    Print board [6]
+END FUNCTION 
+
+FUNCTION Win_conditions
+    SET win_patterns[
+    [o,1,2], [3,4,5], [6,7,8], Rows
+    [0,3,6], [1,4,7], [2,5,8], Columns
+    [0,4,8], [2,4,6]   
+    ]
+
+FUNCTION enter_move
+While true:
+promt current player "enter a value integer"
+Read input
+
+    If index >=0 AND index <=8 Then
+        If board[index] != 'X' AND board[index] !='0' Then 
+        RETURN index
+        ELSE
+        PRINT 'That spot is already taken. Try again'
+        END If 
+    ELSE
+        Print 'Invalid Input'
+    END If 
+    END WHILE 
+
+
+FUNCTION free_board_fields
+
+
+Main Game Loop
+While Win_conditions is not met;
+DISPLAY the board, and free_board_fields, and available_fields
